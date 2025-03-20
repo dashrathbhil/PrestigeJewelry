@@ -362,7 +362,7 @@ p {
 /* ===========common css ends ========== */
 
 body {
-    background-image: url(/assets/images/body-bg-free-img.jpg);
+    background-image: url(../images/body-bg-free-img.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -390,7 +390,7 @@ header {}
 }
 
 .hero-section {
-    background-image: url(/assets/images/rings.jpg);
+    background-image: url(../images/rings.jpg);
     background-color: #141516;
     /* height: 600px; */
     background-size: cover;
@@ -557,7 +557,7 @@ header {}
 }
 
 .neckless {
-    background-image: url(/assets/images/pic-01.jpg);
+    background-image: url(../images/pic-01.jpg);
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -565,7 +565,7 @@ header {}
 }
 
 .earrings {
-    background-image: url(/assets/images/earrings-free-img-1.jpg);
+    background-image: url(../images/earrings-free-img-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -613,13 +613,13 @@ header {}
 }
 
 .for-man {
-    background-image: url(/assets/images/man-with-hat-free-img.jpg);
+    background-image: url(../images/man-with-hat-free-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .for-women {
-    background-image: url(/assets/images/woman-jewelry-free-img.jpg);
+    background-image: url(../images/woman-jewelry-free-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -737,7 +737,7 @@ header {}
 
 /* ====================ABOUT US ==================== */
 .about-us-hero-section {
-    background-image: url(/assets/images/about-us-bg-free-img.jpg);
+    background-image: url(../images/about-us-bg-free-img.jpg);
     background-color: rgba(0, 0, 0, 0.3);
 
     background-size: cover;
@@ -815,7 +815,7 @@ header {}
 }
 
 .history {
-    background-image: url(/assets/images/about-bg-free-img.jpg);
+    background-image: url(../images/about-bg-free-img.jpg);
     background-color: rgba(0, 0, 0, 0.4);
     background-size: cover;
     background-repeat: no-repeat;
