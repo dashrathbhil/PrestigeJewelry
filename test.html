@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <head>
+   <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+
+  <style>
+    /* *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+      border: 1px solid white;
+    } */
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <div class="shopping-cart">
+    <div class="cart-header">
+      <p>Shopping Cart</p>
+      <div class="close-btn" id="clos"><i class="fas fa-xmark"></i> <!-- fa-xmark is slimmer -->
+      </div>
+    </div>
+    <div class="items-box">
+      <div class="zero-product-ntf-box zero-product">
+        <p>No products in the cart.</p>
+      </div>
+
+      <div class="cart-item">
+        <img src="assets/images/diamond-band-600x600card1.jpg" alt="Couple Silver Ring Diamond">
+        <div class="item-details">
+          <p>Couple Silver Ring Diamond</p>
+          <div class="quantity">
+            <button id="item-decrease-btn">-</button>
+            <input id="input-items" type="text" value="1" placeholder="1">
+            <button id="item-increase-btn">+</button>
+          </div>
+        </div>
+        <span class="item-price" id="item-price">$594.00</span>
+        <span class="remove-item" id="remove-item"><i class="far fas fa-xmark "></i>
+        </span>
+      </div>
+    </div>
+    <div class="cart-subtotal">
+      <p>Subtotal:</p>
+      <p id="total-sum">$594.00</p>
+    </div>
+    <div class="cart-buttons zero-product">
+      <button id="continue-to-shopping">CONTINUE SHOPING</button>
+
+    </div>
+    <div class="cart-buttons">
+      <button id="view-cart-btn">VIEW CART</button>
+      <button id="checkout-btn">CHECKOUT</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
