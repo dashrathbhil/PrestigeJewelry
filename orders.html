@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="assets/favicon_io/favicon.ico" color="#5bbad5">
 
     <!-- Web App Manifest -->
-    <!-- <link rel="manifest" href="assets/favicon_io/site.webmanifest"> -->
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- font remixicon -->
@@ -117,7 +117,7 @@
                                 </i>
                                 <div>
 
-                                    <h2> My Account</h2>
+                                    <h2> My orders</h2>
                                 </div>
                             </a>
 
@@ -201,12 +201,12 @@
                     <!-- Overlay -->
 
 
-                 
+
                 </div>
                 <div class="row justify-content-around first-section">
                     <div class="col-md-12 col-lg-12 text-centre">
                         <div class="myaccontent">
-                            <h1>Orders</h1>
+                            <h1>My orders</h1>
                             <p>Home » My account
                             </p>
                         </div>
@@ -221,25 +221,89 @@
                     <div class="login-box">
                         <h2 class="text-centre">Login</h2>
                         <form id="form">
-                            <input type="text" placeholder="Username or email address *Required" required
-                                id="userName" />
-
+                            <input type="text" placeholder="Username or email address *Required" id="username" name="username"
+                                autocomplete="on" />
+                            <span id="namevalidation" class="namevalidation"></span>
                             <div class="password-wrapper">
                                 <input type="password" id="password" placeholder="Password">
                                 <span id="togglePassword">
                                     <i class="fa-regular fa-eye" id="eyeIcon"></i>
                                 </span>
-                               
+
                             </div>
                             <span id="passwordvalidation" class="passwordvalidation"></span>
                             <div class="remember">
-                                <input type="checkbox" id="remember">
-                                <label for="remember">Remember me</label>
+                                <input type="checkbox" id="rememberme">
+                                <label for="rememberme">Remember me</label>
                             </div>
 
                             <button class="login-btn" id="loginbtn">LOG IN</button>
                         </form>
-                        
+                        <!-- <script>
+                            document.getElementById("form").addEventListener("submit", function (event) {
+                                event.preventDefault();
+                            });
+                            const passwordInput = document.getElementById("password");
+                            const passwordValidation = document.getElementById("passwordvalidation")
+                            const userName = document.getElementById("username");
+                            const userNameValidation = document.getElementById("namevalidation");
+                            const rememberMeCheckbox = document.getElementById("rememberme");
+                            function validatePassword() {
+                                if (passwordInput.value.trim() === "") {
+                                    passwordValidation.innerText = "Enter password";
+                                    passwordValidation.style.color = "red";
+                                    passwordValidation.style.display = "block";
+                                    return false;
+                                } else if (passwordInput.value.length < 6) {
+                                    passwordValidation.innerText = "Password must be at least 6 characters";
+                                    passwordValidation.style.color = "orange";
+                                    passwordValidation.style.display = "block";
+                                    return false;
+                                } else {
+                                    passwordValidation.style.display = "none";
+                                    return true;
+                                }
+                            } passwordInput.addEventListener("input", validatePassword);
+                            function validateUsername() {
+                                if (userName.value.trim() === "") {
+                                    userNameValidation.innerText = "Username is required";
+                                    userNameValidation.style.color = "red";
+                                    userNameValidation.style.display = "block";
+                                    return false;
+                                } else {
+                                    userNameValidation.style.display = "none";
+                                    return true;
+                                }
+                            }
+                            userName.addEventListener("input", validateUsername);
+
+                            // Use the function in an event listener
+                            loginbtn.addEventListener("click", () => {
+                                let isUsernameValid = validateUsername();
+                                let isPasswordValid = validatePassword();
+
+                                if (isUsernameValid && isPasswordValid) {
+                                    // console.log("done");
+
+                                    if (rememberMeCheckbox.checked) {
+                                        localStorage.setItem("userName", userName.value);
+                                        sessionStorage.setItem("userPassword", passwordInput.value);
+                                    } else {
+                                        localStorage.removeItem("userName");
+                                        sessionStorage.removeItem("userPassword");
+                                    }
+
+                                    window.location.href = "index.html"
+                                }
+                            });
+
+                            // localStorage.clear();
+                            // localStorage.clear();
+
+
+
+
+                            // });</script> -->
                     </div>
                 </div>
             </div>
