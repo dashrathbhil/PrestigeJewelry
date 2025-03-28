@@ -42,24 +42,81 @@ if (videoBox && thumb) {
 // PASSWORD TOGGLE
 // const passwordInput = document.getElementById("password");
 
-
 // passwordInput.addEventListener("input", () => {
 //   if (passwordInput.value.trim() === "") {
 //     passwordValidation.innerText = "Enter password";
 //     passwordValidation.style.color = "red";
-//     userValidation.style.display = "block"; 
+//     userValidation.style.display = "block";
 
 //   } else if (passwordInput.value.length < 6) {
 //     passwordValidation.innerText = "Password must be at least 6 characters";
 //     passwordValidation.style.color = "orange";
-//     userValidation.style.display = "block"; 
+//     userValidation.style.display = "block";
 //     return false;
 //   } else {
 //     passwordValidation.style.display = "none";
 //     // passwordValidation.style.color = "green";
-      
+
 //   }
 // });
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+});
+const passwordInput = document.getElementById("password");
+const passwordValidation = document.getElementById("passwordvalidation");
+const userName = document.getElementById("username");
+const userNameValidation = document.getElementById("namevalidation");
+const rememberMeCheckbox = document.getElementById("rememberme");
+function validatePassword() {
+  if (passwordInput.value.trim() === "") {
+    passwordValidation.innerText = "Enter password";
+    passwordValidation.style.color = "red";
+    passwordValidation.style.display = "block";
+    return false;
+  } else if (passwordInput.value.length < 6) {
+    passwordValidation.innerText = "Password must be at least 6 characters";
+    passwordValidation.style.color = "orange";
+    passwordValidation.style.display = "block";
+    return false;
+  } else {
+    passwordValidation.style.display = "none";
+    return true;
+  }
+}
+passwordInput.addEventListener("input", validatePassword);
+function validateUsername() {
+  if (userName.value.trim() === "") {
+    userNameValidation.innerText = "Username is required";
+    userNameValidation.style.color = "red";
+    userNameValidation.style.display = "block";
+    return false;
+  } else {
+    userNameValidation.style.display = "none";
+    return true;
+  }
+}
+userName.addEventListener("input", validateUsername);
+
+// Use the function in an event listener
+loginbtn.addEventListener("click", () => {
+  let isUsernameValid = validateUsername();
+  let isPasswordValid = validatePassword();
+
+  if (isUsernameValid && isPasswordValid) {
+    // console.log("done");
+
+    if (rememberMeCheckbox.checked) {
+      localStorage.setItem("userName", userName.value);
+      sessionStorage.setItem("userPassword", passwordInput.value);
+    } else {
+      localStorage.removeItem("userName");
+      sessionStorage.removeItem("userPassword");
+    }
+
+    window.location.href = "index.html";
+  }
+});
 const togglePassword = document.getElementById("togglePassword");
 const eyeIcon = document.getElementById("eyeIcon");
 if (passwordInput && togglePassword && eyeIcon) {
