@@ -116,7 +116,7 @@
                                 </i>
                                 <div>
 
-                                    <h2> My Account</h2>
+                                    <h2 id="myusername"> My Account</h2>
                                 </div>
                             </a>
 
@@ -585,10 +585,15 @@
         </section>
 
     </footer>
-</body>
+
 
 <!-- <script src="assets/js/navbar.js"></script> -->
 <script src="assets/js/script.js"></script>s
+<script>
+    window.addEventListener("load", function () {
+        document.getElementById("myusername").innerText =
+            localStorage.getItem("userName");
+    });</script>
 <script>
 
 
@@ -604,5 +609,5 @@
         }
     });
 </script>
-
+</body>
 </html>

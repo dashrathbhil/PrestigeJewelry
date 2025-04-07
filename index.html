@@ -339,32 +339,28 @@
         </section>
     </footer>
     <script src="assets/js/script.js"></script>
-</body>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("myusername").innerText =
+                localStorage.getItem("userName");
+        });</script>
+
 
 
 <script>
-    window.addEventListener("load", function () {
-        document.getElementById("myusername").innerText =
-            localStorage.getItem("userName");
-    });</script>
+    // console.log("Page: " + window.location.pathname);
 
-<script>
+    // let navLinks = document.querySelectorAll("nav a");
 
-    console.log("Page: " + window.location.pathname);
+    // navLinks.forEach(link => {
+    //     let linkHref = link.getAttribute("href");
 
-    let navLinks = document.querySelectorAll("nav a");
-
-    navLinks.forEach(link => {
-        let linkHref = link.getAttribute("href");
-
-        if (window.location.pathname.includes(linkHref)) {
-            link.style.color = "rgb(255, 207, 84)";
-        }
-    });
+    //     if (window.location.pathname.includes(linkHref)) {
+    //         link.style.color = "rgb(255, 207, 84)";
+    //     }
+    // });
 
 </script>
 </body>
-
-</html>
 
 </html>

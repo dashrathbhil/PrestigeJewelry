@@ -221,8 +221,8 @@
                     <div class="login-box">
                         <h2 class="text-centre">Login</h2>
                         <form id="form">
-                            <input type="text" placeholder="Username or email address *Required" id="username" name="username"
-                                autocomplete="on" />
+                            <input type="text" placeholder="Username or email address *Required" id="username"
+                                name="username" autocomplete="on" />
                             <span id="namevalidation" class="namevalidation"></span>
                             <div class="password-wrapper">
                                 <input type="password" id="password" placeholder="Password">
@@ -239,6 +239,13 @@
 
                             <button class="login-btn" id="loginbtn">LOG IN</button>
                         </form>
+                        <!-- <script>
+                            document.getElementById("password").addEventListener("keydown", function (event) {
+                                if (event.key === " ") {
+                                    event.preventDefault();
+                                }
+                            });
+                        </script> -->
                         <!-- <script>
                             document.getElementById("form").addEventListener("submit", function (event) {
                                 event.preventDefault();
@@ -328,6 +335,11 @@
     </footer>
     <!-- <script src="assets/js/navbar.js"></script> -->
     <script src="assets/js/script.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("myusername").innerText =
+                localStorage.getItem("userName");
+        });</script>
 </body>
 
 </html>

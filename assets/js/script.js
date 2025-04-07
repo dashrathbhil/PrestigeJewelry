@@ -59,7 +59,11 @@ if (videoBox && thumb) {
 
 //   }
 // });
-
+document.getElementById("password").addEventListener("keydown",  (input)=> {
+  if (input.key === " ") {
+      input.preventDefault();
+  }
+});
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 });
@@ -69,7 +73,8 @@ const userName = document.getElementById("username");
 const userNameValidation = document.getElementById("namevalidation");
 const rememberMeCheckbox = document.getElementById("rememberme");
 function validatePassword() {
-  if (passwordInput.value.trim() === "") {
+  
+  if (passwordInput.value.trim() === "" ) {
     passwordValidation.innerText = "Enter password";
     passwordValidation.style.color = "red";
     passwordValidation.style.display = "block";

@@ -249,7 +249,7 @@
             </div>
         </section>
     </footer>
-</body>
+
 <script src="assets/js/script.js"></script>
 <script>
     console.log("Page: " + window.location.pathname);
@@ -264,5 +264,10 @@
         }
     });
 </script>
-
+<script>
+    window.addEventListener("load", function () {
+        document.getElementById("myusername").innerText =
+            localStorage.getItem("userName");
+    });</script>
+</body>
 </html>

@@ -294,21 +294,26 @@
         </section>
     </footer>
 
+    <script src="assets/js/script.js"></script>
+    <script>
+        console.log("Page: " + window.location.pathname);
+    
+        let navLinks = document.querySelectorAll("nav a");
+    
+        navLinks.forEach(link => {
+            let linkHref = link.getAttribute("href");
+    
+            if (window.location.pathname.includes(linkHref)) {
+                link.style.color = "rgb(255, 207, 84)";
+            }
+        });
+    
+    </script>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("myusername").innerText =
+                localStorage.getItem("userName");
+        });</script>
 </body>
-<script src="assets/js/script.js"></script>
-<script>
-    console.log("Page: " + window.location.pathname);
-
-    let navLinks = document.querySelectorAll("nav a");
-
-    navLinks.forEach(link => {
-        let linkHref = link.getAttribute("href");
-
-        if (window.location.pathname.includes(linkHref)) {
-            link.style.color = "rgb(255, 207, 84)";
-        }
-    });
-
-</script>
 
 </html>
