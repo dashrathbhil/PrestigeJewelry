@@ -1077,7 +1077,7 @@ body {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background: url("../images/blue-stone-600x600card6.jpg") no-repeat center;
+    background: url("../images/play.png") no-repeat center;
     background-size: contain;
     background-position: center;
     opacity: 0.8;
@@ -1740,7 +1740,7 @@ body {
 /* ==================== STORE PAGE ENDS==================== */
 
 /* ==================== SHOPING CART START==================== */
-.shopping-cart {D@vid@vid?08
+.shopping-cart {
     width: 400px;
     border: 1px solid var(--black-555-color);
     margin: 30px auto;
